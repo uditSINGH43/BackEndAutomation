@@ -1,4 +1,6 @@
 import configparser
+import os
+
 import mysql.connector
 from mysql.connector import Error
 
@@ -17,7 +19,7 @@ connect_config = {
 
 
 def getPassword():
-    return "55AC$C7b"
+    return "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"
 
 def getConnection():
     try:

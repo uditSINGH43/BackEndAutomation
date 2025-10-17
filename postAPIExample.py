@@ -30,7 +30,9 @@ res_json = response_deleteBook.json()
 print(res_json["msg"])
 assert res_json["msg"] == "book is successfully deleted"
 
-# # Authentication
-# url = "https://api.github.com/user"
-# github_response = requests.get(url, verify=False, auth=('uditSINGH43', getPassword()))
-# print(github_response.status_code)
+# Authentication
+url3 = "https://api.github.com/user/repos"
+token = getPassword()  # make sure this returns your token, not password
+github_response = requests.get(url3, headers={"Authorization": f"token {token}"})
+
+print(github_response.status_code)
