@@ -19,7 +19,7 @@ connect_config = {
 
 
 def getPassword():
-    return "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"
+    return os.getenv("GITHUB_TOKEN")
 
 def getConnection():
     try:
